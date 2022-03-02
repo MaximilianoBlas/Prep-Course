@@ -19,3 +19,11 @@ img {
     border-style: solid;
     border-color: aqua;
 }
+body {
+    background-image: url("https://cdn-blog1.fibrasynormasdecolombia.com/wp-content/uploads/2018/02/Foto-1-2.jpg");
+   
+
+}
+div{
+    text-align: center;
+}
