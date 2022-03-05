@@ -1,0 +1,8 @@
+for: Es una expresión de bucle que permite repetir un código por un tiempo determinado por unas condiciones.
+
+&&, ||, !: Estos son operadores lógicos.El operador && compara 2 o más expresiones si determina que todas son 
+verdaderes retorna true al aperador del programa, en caso contrario retorna false.
+Por otro lado || no necesita que todas las expresiones que compara sean ciertas para retornar true, con que solo
+una lo sea ya es suficiente para retornar true, en caso que ninguna sea cierta retornara false.
+El ! es otro operador lógico que invierte el dato booleanos que retornaria naturalmente. Por lo que ante una 
+expresión que retornaria true al anteponerle un ! esta retornaria false. 

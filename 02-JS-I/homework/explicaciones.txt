@@ -1,0 +1,17 @@
+Variables:  Las variables son espacios en los que puedes guardar información.
+
+Strings: Los Strings son un tipo de dato, consiste en cadena de texto.
+
+Funciones (argumentos, return): Las funciones son un tipo de objeto que permite ser invocado en el furuto y aplicar
+el código que contiene dentro, es una forma de ahorar código. Puede constar de argumento entre los parentesis que
+le siguen, este argumento es una variable que esta dentro del código y puede ser completada al invocar la función.
+Return es una declaración que retorna algo, esta declaración es la manera que tenemos de conocer valores o 
+datos de la función que de otra manera no conoceriamos. 
+
+Declaraciones if: Es un Statement que permite al operador de JavaScript tomar una dedición frente a una bifurcación
+de código dependiento de condiciones que se le presentan. Si tal condición es verdadera debe iniciar por un camino
+y si la condicion es falsa debe ir por otro camino.
+
+Valores booleanos (true, false): Los valores booleanos son los que utiliza el operador de JavaScript y el programador
+para determinar si una condicón o expresión es verdadera(true) o falsa(false) y en base a esa información actuar de determinada
+manera.
