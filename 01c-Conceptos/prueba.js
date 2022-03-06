@@ -1,5 +1,6 @@
-
-for (i = 5; i < 100; i + 5){
-    i = i + i
-    console.log(i)
-}
+var palabras = ["hola" , "nano" , "amigo" , "mio"]
+while (palabras.length > 1) {
+    var primera = palabras.shift()
+    palabras [palabras.length - palabras.length] = primera + " " + palabras[palabras.length - palabras.length];
+  
+  } console.log(palabras);
