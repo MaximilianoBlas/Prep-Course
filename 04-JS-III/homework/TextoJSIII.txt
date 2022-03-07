@@ -1,0 +1,2 @@
+Arrays: los arrays son listas, contenedores de datos ordenados.
+ Al cual podes acudir para utilizar, sacar o agregar datos.

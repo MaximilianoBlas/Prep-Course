@@ -1,6 +1,6 @@
-var palabras = ["hola" , "nano" , "amigo" , "mio"]
-while (palabras.length > 1) {
-    var primera = palabras.shift()
-    palabras [palabras.length - palabras.length] = primera + " " + palabras[palabras.length - palabras.length];
-  
-  } console.log(palabras);
+var respuesta = [];
+for (var i = 0; i < array.length; i++) {
+  if (array[i] > 100) {
+    respuesta.push(array[i])
+  }
+} return respuesta
