@@ -71,6 +71,11 @@ function tieneEmail(usuario) {
     } else {
       return true
     }
+   /* if (usuario.email) {
+      return false
+    } else {
+      return true
+    }*/
   
 }
 
@@ -88,9 +93,13 @@ function tienePropiedad(objeto, propiedad) {
       return false
     }
   }
-  
+  /*     if (objeto.propiedad) {
+      return true
+    } else {
+      return false
+    }*/
 }
-
+//aca no funcionan los corchetes¿?
 function verificarPassword(usuario, password) {
   // Comprueba si la "password" enviada coincide con la propiedad "password" del objeto "usuario"
   // Devuelve "true" si coinciden
@@ -140,14 +149,8 @@ function sumarLikesDeUsuario(usuario) {
   // Devuelve la suma
   // Tu código:
   var suma = 0
-  var aux = 0
   for (let i = 0; i < usuario["posts"].length; i++) {
-   aux = usuario["posts"][i]["likes"]
-   suma += aux
-   if (aux === undefined){
-     return suma
-     break
-   }
+   suma += usuario["posts"][i]["likes"]
   }
   return suma
 }

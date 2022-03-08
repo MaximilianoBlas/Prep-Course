@@ -1,0 +1,8 @@
+Objeto: es un espacio que puede guardar muchos datos y diferenciarlos de manera de acceder a solo uno de ellos a voluntad.
+Propiedad: La propiedad es unidad en la que se guarda la información en el objeto. Esta conformada por una clave, la cual va a ser necesario
+para acceder al valor que es el dato propiamente dicho.
+Metodo: metodo es el nombre que recibe una función dentro de un objeto. 
+Bucle for...in: esta declaración nos permite ir pasando por todas las propiedades de un objeto. 
+Notación de puntos vs notación de corchetes. La notación con punto es más agil, pero solo pueden traer propiedades de las cuales
+sepamos el nombre, en cambio las notaciones con corchetes pueden traer propiedades cuyo nombre forme parte de un argumento o sea directamente 
+una variable. 
