@@ -1,0 +1,4 @@
+Prototype: es un prototipo, que hace alusión a un objeto que precede al actual en el que estas trabajando
+y al cual podes recurrir mediante un línea de código para traer funciones, objeto y mas
+Constructor: es un objeto en el cual se guardan variables, objetos, funciones y que otra varible 
+creandose a partir de él puede contener y compartir con otras variables. 
