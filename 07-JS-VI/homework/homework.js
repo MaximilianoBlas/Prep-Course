@@ -58,14 +58,18 @@ function filter(array) {
   //Filtrar todos los elementos del array que comiencen con la letra "a".
   //Devolver un nuevo array con los elementos que cumplen la condición
   //Tu código:
-  var nuevoArreglo = []
+ /* var nuevoArreglo = []
   array.forEach(function(elemento){
     if(elemento.charAt(0) === "a"){
      nuevoArreglo.push(elemento)
     } 
  })
-   return nuevoArreglo
+   return nuevoArreglo*/
 
+   var conincidencias = array.filter(function(ele){
+     return ele[0] === "a"
+   })
+   return conincidencias
 }
 
 // No modificar nada debajo de esta línea
