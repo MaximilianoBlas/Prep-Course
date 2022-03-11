@@ -10,15 +10,12 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
-  var mat = []
-  matriz = function(objeto){
+  /*var nuevoArreglo = []
     for (var k in objeto) {
-      
-       mat.push([k , objeto[k]])
+       nuevoArreglo.push([k , objeto[k]])
       }
-    }
-    matriz(objeto)
-    return mat
+    return nuevoArreglo*/
+    return Object.entries(objeto)
 }
 
 
@@ -29,9 +26,8 @@ function numberOfCharacters(string) {
   //Escribe tu código aquí
 //"sktpwrroqstkrpwwsqtqopwktsd"
 //"h"
-  var objeto = {}
+ /* var objeto = {}
   var valor = 0
-  strin = function(string){
 for (let i = 0; i < string.length; i++) {
   var str = string.charAt(i)
   valor = 0
@@ -40,11 +36,18 @@ for (let i = 0; i < string.length; i++) {
         valor = valor + 1
         objeto[str] = valor
        }
-     
      }
    }
+  return objeto*/
+  var objeto = {}
+  for (let i = 0; i < string.length; i++) {
+    if (objeto.hasOwnProperty(string[i])) {
+      objeto[string[i]] += 1
+    } else {
+      objeto[string[i]] = 1
+    }
+    
   }
-  strin(string)
   return objeto
 }
 
@@ -57,19 +60,13 @@ function capToFront(s) {
   var str = ""
   var str2 = ""
   var resultado = ""
-  strin = function(s){
     for (let i = 0; i < s.length; i++) {
       if (s.charAt(i) === s.charAt(i).toUpperCase() ) {
-        str = str + s.charAt(i)
-        
+        str = str + s.charAt(i) 
       } else {
         str2 = str2 + s.charAt(i)
-      }
-
-      
+      } 
     }
-  }
-  strin(s)
   return resultado = str + str2
 }
 
@@ -81,23 +78,23 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
-  var aux = ""
+  /*var aux = ""
   var resultado = ""
-  strin = function(str){
     for (let i = 0; i < str.length; i++) {
-      if (str.charAt(i) !== " " || str.charAt(i) === "!") {
+      if (str.charAt(i) !== " ") {
           aux = str.charAt(i) + aux
       } else {
         resultado = resultado + aux + " "
         aux = ""
-      }
-      
+      } 
     }
-  }
- 
-  strin(str)
   resultado = resultado + aux
-  return resultado
+  return resultado*/
+  var aux = str.split(" ")
+  nuevoArreglo = aux.map(function(ele){
+    return ele.split("").reverse().join("")
+  })
+  return nuevoArreglo.join(" ")
 } 
 
 
@@ -108,7 +105,7 @@ function capicua(numero){
   //Escribe tu código aquí
   //15451
   //"15451"
-  var resultado = 0
+  /*var resultado = 0
   var str = ""
    capicua = function(numero){
     str = numero.toString()
@@ -119,7 +116,6 @@ function capicua(numero){
         resultado = 2
         return "No es capicua"
       }
-      
     }
    }
    capicua(numero)
@@ -127,9 +123,17 @@ function capicua(numero){
      return "Es capicua"
    } else if (resultado === 2) {
      return "No es capicua"
+   }*/
+   var str1 = numero.toString()
+   str2 = str1.split("").reverse().join("")
+   if (str1 === str2) {
+     return "Es capicua"
+     
+   } else{
+     return "No es capicua"
    }
-
-
+     
+   
 }
 
 
@@ -137,18 +141,12 @@ function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
-  var caden = ""
-  cade = function(cadena){
-    caden = cadena
-    caden = caden.replace("a","")
-    caden = caden.replace("b","")
-    caden = caden.replace("c","")
-    
-
-  }
-   cade(cadena)
-   return caden
-   
+ // return cadena.replace(/a/g,"").replace(/b/g,"").replace(/c/g,"")
+ var str = cadena.split("")
+ nuevoArreglo = str.filter(function(ele){
+  return ele !== "a" && ele !== "b" && ele !== "c"  
+ })
+ return nuevoArreglo.join("")
 }
 
 
@@ -156,17 +154,24 @@ function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
-  var aux = 1
-  fun = function (matriz){
-    for (let i = 0; i < matriz.length; i++) {
-     if ( matriz[i].length > aux) {
-         aux = matriz[i]
+ /*return arr.sort(function(a,b){
+   return a.length - b.length})*/
+   var boo = true
+   var aux = []
+   while (boo) {
+     boo = false
+     for (let i = 0; i < arr.length -1; i++) {
+       if (arr[i].length > arr[i+1].length) {
+         aux = arr[i]
+         arr[i] = arr[i+1]
+         arr[i+1] = aux
+         boo = true
+       }
        
      }
-      
-    }
-  }
-
+     
+   }
+   return arr
 }
 
 
@@ -176,6 +181,21 @@ function buscoInterseccion(arreglo1, arreglo2){
   //Si no tienen elementos en común, retornar un arreglo vacío.
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
   //Escribe tu código aquí  
+  /*var arreglo = 0
+    var arr = arreglo1.filter(function(e){
+      return arreglo2.indexOf(e) > -1 
+    })
+    arreglo = arr
+  return arreglo*/
+  var capi = []
+  for (let i = 0; i < arreglo1.length; i++) {
+    for (let j = 0; j < arreglo2.length; j++) {
+      if(arreglo1[i] === arreglo2[j]){
+      capi.push(arreglo2[j])
+      }
+    }
+  }
+  return capi
 }
 
 
